@@ -1,9 +1,125 @@
 /* NOTE: Make sure that when you complete your Lab, you leave a comment at the top of this file listing which new properties you used! */
 
+/* I used 'transform' in combination with 'toggle' on the main menu in order to hide and display the properties when clicked */
+
 :root {
   --dk-grey: #263238;
   --hot-pink: #EC407A;
   --yellow: #FDD835;
   --green: #8BC34A;
   --white: #FAFAFA;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.category > img {
+  width: 5vw;
+  height: 5vh;
+  padding-bottom: 1.5rem;
+}
+
+header {
+  background-color: var(--dk-grey);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+li {
+  color: var(--white);
+}
+
+.inner-container {
+  display: flex;
+}
+
+.main-menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 5rem;
+  z-index: 99;
+  transform: translateY(-100%);
+}
+
+.show-menu {
+  transform: translateY(0);
+}
+
+.category {
+  display: flex;
+  margin: 0 10rem;
+  font-weight: 600;
+}
+
+.submenu {
+  margin-left: 14rem; 
+  background-color: var(--dk-grey);
+}
+
+.e {
+  color: var(--hot-pink);
+}
+
+.nav-logo {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-left: 4rem;
+  align-content: center;
+}
+
+.menu-icon {
+  margin-left: calc(100vw - 20rem);
+  color: var(--white);
+  text-align: center;
+}
+
+main {
+  background: url('../img/crowd-background.webp') center / cover no-repeat;
+  height: 70vh;
+  align-content: center;
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  text-align: center;
+  align-content: space-between;
+  width: calc(100% / 4);
+  margin: auto;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.body-content > h1, .body-content > p, button  {
+  margin: 0.5rem;
+}
+
+button {
+  background: linear-gradient(90deg, rgba(184,10,57,1) 0%, rgba(255,76,0,1) 100%, rgba(121,69,9,0.47942927170868344) 100%);
+  border-radius: 1rem;
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: var(--white);
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    height: 100vh;
+  }
+
+  .body-content {
+    width: calc(100% / 1.25);
+
+  }
 }
